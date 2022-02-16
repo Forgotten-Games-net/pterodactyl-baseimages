@@ -22,7 +22,7 @@ FROM alpine:latest
 LABEL maintainer="fistwho@forgotten-games.net"
 
 # Install dependencies
-RUN apk add --no-cache --update wget bash curl ca-certificates openssl git tar fontconfig \
+RUN apk add --no-cache --update wget bash curl ca-certificates openssl git tar fontconfig mysql-client \
   && adduser --disabled-password --home /home/container container
 
 # Copy needed libs from build stage
