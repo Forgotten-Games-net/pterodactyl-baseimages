@@ -16,7 +16,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     lib32z1 \
     zlib1g:i386 \
     g++-multilib=4:8.3.0-1 \
-    libmysqlclient-dev:i386 \
+    libmariadb-dev:i386 \
     libsqlite3-dev:i386
 
 FROM alpine:latest
@@ -24,7 +24,7 @@ FROM alpine:latest
 LABEL maintainer="fistwho@forgotten-games.net"
 
 # Install dependencies
-RUN apk add --no-cache --update wget bash curl ca-certificates openssl git tar fontconfig mariadb-connector-c-dev \
+RUN apk add --no-cache --update wget bash curl ca-certificates openssl git tar fontconfig \
   && adduser --disabled-password --home /home/container container
 
 # Copy needed libs from build stage
