@@ -15,7 +15,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libc6-i386 \
     lib32z1 \
     zlib1g:i386 \
-    g++-multilib=4:8.3.0-1 
+    g++-multilib=4:8.3.0-1 \
+    libmysqlclient-dev:i386 \
+    libsqlite3-dev:i386
 
 FROM alpine:latest
 
