@@ -14,8 +14,11 @@ RUN dpkg --add-architecture i386
 RUN apt-get update && apt-get install -y --no-install-recommends \
     ca-certificates \
     binutils \
-    lib32stdc++6:i386 \
-    libstdc++6:i386
+    lib32gcc1 \
+    libstdc++6 \
+    libstdc++6:i386 \
+    libgcc1:i386 \
+    libc6:i386
 
 RUN adduser --disabled-password --home /home/container container
 
